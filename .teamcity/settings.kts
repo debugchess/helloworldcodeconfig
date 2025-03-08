@@ -1,16 +1,24 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
 
-version = "2024.12"
+version = "2024.03"
 
 project {
     buildType {
         id("Helloworld_buildconfigid")
         name = "Hello World Build"
 
+        vcs {
+            root(DslContext.settingsRoot)
+        }
+
         steps {
             script {
-                scriptContent = echo "Hello, World!"
+                name = "Print Hello World"
+                scriptContent = """
+                    #!/bin/bash
+                    echo "Hello, World!"
+                """.trimIndent()
             }
         }
     }
