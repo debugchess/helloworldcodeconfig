@@ -5,7 +5,7 @@ version = "2024.12"
 
 project {
     buildType {
-        id("HelloWorldBuild")
+        id("Helloworld_buildconfigid")
         name = "Hello World Build"
 
         vcs {
