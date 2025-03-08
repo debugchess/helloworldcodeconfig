@@ -14,11 +14,7 @@ project {
 
         steps {
             script {
-                name = "Print Hello World"
-                scriptContent = """
-                    #!/bin/bash
-                    echo "Hello, World!"
-                """.trimIndent()
+                scriptContent = echo "Hello, World!"
             }
         }
     }
