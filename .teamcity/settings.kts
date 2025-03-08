@@ -8,10 +8,6 @@ project {
         id("Helloworld_buildconfigid")
         name = "Hello World Build"
 
-        vcs {
-            root(DslContext.settingsRoot)
-        }
-
         steps {
             script {
                 scriptContent = echo "Hello, World!"
